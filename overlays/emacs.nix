@@ -55,7 +55,7 @@ let
                         "${super.lib.getLib self.libgccjit}/lib"
                         "${super.lib.getLib self.libgccjit}/lib/gcc"
                         "${super.lib.getLib self.stdenv.cc.libc}/lib"
-		      ] ++ super.lib.optionals (self.stdenv.cc?cc.libgcc) [
+		      ] ++ super.lib.optionals (true) [
 			"${super.lib.getLib self.stdenv.cc.cc.libgcc}/lib"
 		      ] ++ [
 
